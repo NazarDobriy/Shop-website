@@ -1,0 +1,69 @@
+@import 'variables';
+
+.goods-image {
+    height: 128px;
+    width: 128px;
+}
+
+.goods {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 35px;
+
+    @include breakpoint(md) {
+        padding-top: 25px;
+    }
+    
+    @include breakpoint(sm) {
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        @include breakpoint(sm) {
+            flex: 0 0 50%;
+            padding-bottom: 30px;
+            font-size: 17px;
+        }
+
+        @include breakpoint(xsss) {
+            flex: 0 0 100%;
+            padding-bottom: 30px;
+            font-size: 16px;
+        }
+    }
+
+    &-item:last-child {
+        @include breakpoint(sm) {
+            padding-bottom: 25px;
+        }
+    }
+
+    &-title {
+        font-weight: 600;
+    }
+
+    &-price {
+        font-style: 18px;
+        font-weight: 500;
+    }
+
+    &-btn {
+        padding: 5px 17px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-bottom: 5px;
+        border: 2px dashed black;
+    }
+
+    &-btn:hover {
+        //background-color: rgb(32, 219, 32);
+        background-color: rgb(20, 203, 216);
+    }
+}
+
+.goods:last-child {
+    @include breakpoint(sm) {
+        padding-top: 0;
+    }
+}

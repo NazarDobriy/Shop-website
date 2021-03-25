@@ -1,0 +1,85 @@
+@import 'variables';
+
+.main {
+    height: 350px;
+    width: 450px;
+    background-color: #14d3e0;
+    margin: 100px auto 0 auto;
+    text-align: center;
+
+    @include breakpoint(xs) {
+        width: 415px;
+    }
+
+    @include breakpoint(xss) {
+        height: 335px;
+        width: 380px;
+        font-size: 15px;
+    }
+
+    @include breakpoint(xsss) {
+        height: 330px;
+        width: 100%;
+        font-size: 14.5px;
+    }
+}
+
+.contact-img {
+    padding-top: 10px;
+    margin-bottom: -6px;
+    height: 50px;
+    width: 50px;
+
+    @include breakpoint(xss) {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+.contact-user-img, .contact-phone-img {
+    padding-right: 10px;
+}
+
+input[type="text"] {
+    width: 260px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+
+    @include breakpoint(xs) {
+        width: 240px;
+    }
+
+    @include breakpoint(xss) {
+        width: 235px;
+    }
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 25px;
+
+    @include breakpoint(xs) {
+        padding: 10px 25px;
+    }
+
+    @include breakpoint(xs) {
+        padding: 8px 20px;
+    }
+}
+
+.btn:hover {
+    transition: all 0.5s;
+    background-color: #FF5733;
+    color: #fff;
+}

@@ -1,0 +1,183 @@
+@import 'variables';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-light {
+    background-color: $light;
+}
+
+.page-dark {
+    background-color: #212121;
+    height: 45px;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+        height: 76px;
+    }
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    @include breakpoint(xxl) {
+        max-width: 1000px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 900px;
+    }
+
+    @include breakpoint(lg) {
+        max-width: 800px;
+    }
+
+    @include breakpoint(md) {
+        max-width: 700px;
+    }
+
+    @include breakpoint(sm) {
+        max-width: 595px;
+    }
+
+    @include breakpoint(xs) {
+        max-width: 470px;
+    }
+
+    @include breakpoint(xss) {
+        max-width: 400px;
+    }
+}
+
+.content {
+    min-height: calc(100vh - 45px);
+
+    @include breakpoint(md) {
+        min-height: calc(100vh - 76px);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-frame {
+        display: none;
+    }
+
+    .menu-down {
+        display: none;
+        cursor: pointer;
+
+        &-item {
+            border: 2px dashed #000;
+            padding: 2px 6px;
+            font-weight: 700;
+            background-color: chartreuse;
+        }
+
+        &-item:active {
+            border: 2px solid #000;
+            transition: all .3s;
+            background-color: crimson;
+        }
+    }
+
+    @include breakpoint(md) {
+        &-nav {
+            display: none;
+        }
+
+        .menu-down {
+            display: block;
+        }
+    }
+
+    @include breakpoint(xsss) {
+        .logo-frame {
+            display: block;
+            margin-right: 15px;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        justify-content: space-around;
+    }
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    
+    &-item {
+        margin-left: 52px;
+    }
+    &-link {
+        color: $dark;
+        text-decoration: none;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-logo {
+        @include breakpoint(md) {
+            height: 40px;
+            width: 150px;
+        }
+
+        @include breakpoint(xsss) {
+            height: 32px;
+            width: 130px;
+        }
+    }
+
+    &-nav {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+
+        @include breakpoint(md) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-item {
+        color: white;
+
+        @include breakpoint(md) {
+            flex: 0 0 100%;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @include breakpoint(xsss) {
+            font-size: 12.5px;
+        }
+    }
+
+    &-span {
+        margin-left: 25px;
+        margin-right: 25px;
+
+        @include breakpoint(md) {
+            visibility: hidden;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &-link {
+        color: white;
+        text-decoration: none;
+    }
+}

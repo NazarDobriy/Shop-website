@@ -1,0 +1,83 @@
+@import 'variables';
+
+.faq {
+    margin: 0 auto;
+    width: 70%;
+
+    @include breakpoint(sm) {
+        width: 75%;
+        font-size: 15px;
+    }
+
+    @include breakpoint(xs) {
+        width: 76%;
+        font-size: 14px;
+    }
+
+    @include breakpoint(xss) {
+        width: 100%;
+        font-size: 13.5px;
+    }
+
+    &-top {
+        display: flex;
+        align-items: center;
+    }
+
+    &-title {
+        margin-left: 15px;
+        font-weight: 600;
+    }
+
+    &-subtitle {
+        font-weight: 500;
+        padding-top: 5px;
+        margin-left: 72px;
+    }
+
+    &-subtitle:last-child {
+        padding-bottom: 20px;
+    }
+
+    &-picture {
+        height: 55px;
+        width: 55px;
+    }
+
+    &-list {
+        padding-top: 15px;
+    }
+
+    &-list-nav {
+        margin-left: 102px;
+
+        @include breakpoint(xs) {
+            padding-left: 20px;
+        }
+
+        @include breakpoint(xss) {
+            padding-left: 0;
+        }
+    }
+
+    &-text {
+        margin-left: 71px;
+    }
+
+    &-link {
+        text-decoration: none;
+        color: red;
+    }
+
+    &-link:active {
+        color: green;
+    }
+
+    &-registration {
+        margin-top: 20px;
+    }
+
+    &-order {
+        margin-top: 20px;
+    }
+}

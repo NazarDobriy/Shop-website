@@ -1,0 +1,96 @@
+.faq {
+  margin: 0 auto;
+  width: 70%;
+}
+
+@media (max-width: 720px) {
+  .faq {
+    width: 75%;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .faq {
+    width: 76%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 510px) {
+  .faq {
+    width: 100%;
+    font-size: 13.5px;
+  }
+}
+
+.faq-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faq-title {
+  margin-left: 15px;
+  font-weight: 600;
+}
+
+.faq-subtitle {
+  font-weight: 500;
+  padding-top: 5px;
+  margin-left: 72px;
+}
+
+.faq-subtitle:last-child {
+  padding-bottom: 20px;
+}
+
+.faq-picture {
+  height: 55px;
+  width: 55px;
+}
+
+.faq-list {
+  padding-top: 15px;
+}
+
+.faq-list-nav {
+  margin-left: 102px;
+}
+
+@media (max-width: 650px) {
+  .faq-list-nav {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 510px) {
+  .faq-list-nav {
+    padding-left: 0;
+  }
+}
+
+.faq-text {
+  margin-left: 71px;
+}
+
+.faq-link {
+  text-decoration: none;
+  color: red;
+}
+
+.faq-link:active {
+  color: green;
+}
+
+.faq-registration {
+  margin-top: 20px;
+}
+
+.faq-order {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=FAQ.css.map */
