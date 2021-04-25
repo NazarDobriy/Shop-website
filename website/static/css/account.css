@@ -1,0 +1,94 @@
+.user {
+  height: 400px;
+  width: 350px;
+  margin: 100px auto 0 auto;
+  border: 2px dashed #000;
+  background-color: #d3d01b;
+}
+
+.user-photo {
+  display: block;
+  margin: 20px auto 0 auto;
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+}
+
+.user-edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.user-btn {
+  cursor: pointer;
+  background-color: #00cc00;
+  color: white;
+  border: none;
+  margin-bottom: 20px;
+  letter-spacing: 1.1;
+  font-weight: 500;
+}
+
+.user-btn img {
+  height: 17px;
+  width: 17px;
+}
+
+.user-subtitle {
+  font-weight: 500;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.user-subtitle input[type="text"] {
+  width: 240px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.user-subtitle input[type="text"]::-webkit-input-placeholder {
+  padding-left: 5px;
+}
+
+.user-subtitle input[type="text"]:-ms-input-placeholder {
+  padding-left: 5px;
+}
+
+.user-subtitle input[type="text"]::-ms-input-placeholder {
+  padding-left: 5px;
+}
+
+.user-subtitle input[type="text"]::placeholder {
+  padding-left: 5px;
+}
+
+.user-interaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 15px;
+}
+
+.user .btn-interaction {
+  cursor: pointer;
+  padding: 7px;
+  font-weight: 500;
+  border: none;
+  color: white;
+}
+
+.user .btn-delete {
+  background-color: #ff0000;
+}
+
+.user .btn-update {
+  background-color: #00cc00;
+}
+/*# sourceMappingURL=account.css.map */
