@@ -43,3 +43,33 @@ function add_product(picture_id, tag_id, price_id) {
     });
 }
 
+function changeImg() {
+    let picture = document.getElementById('flash');
+    let page = document.getElementById('content');
+
+    if (picture.src == window.origin + "/static/img/black-flash.png") {
+        picture.src = "../static/img/white-flash.png";
+
+        let header_words = document.querySelectorAll("#inscription");
+
+        for (let i = 0; i < header_words.length; i++) {
+            header_words[i].style.color = "#fff";
+        }
+
+        page.style.backgroundColor = 'gray';
+    }
+
+    else {
+        picture.src = "../static/img/black-flash.png";
+
+        let header_words = document.querySelectorAll("#inscription");
+
+        for (let i = 0; i < header_words.length; i++) {
+            header_words[i].style.color = "#212121";
+        }
+
+        page.style.backgroundColor = '#f9f6f1';
+    }
+}
+
+export default add_product;

@@ -89,4 +89,38 @@
     padding-top: 0;
   }
 }
+
+.buy-btn {
+  padding: 5px 17px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+  border: 2px dashed black;
+}
+
+.buy-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.buy-btn:hover {
+  background-color: #2ee427;
+}
+
+.delete-btn {
+  padding: 5px 17px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+  border: 2px dashed black;
+}
+
+.delete-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.delete-btn:hover {
+  background-color: #ff1414;
+}
 /*# sourceMappingURL=basket.css.map */

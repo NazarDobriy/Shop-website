@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}<title>Account page</title>{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../static/css/account.css">
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="user">
+            <img src="../static/img/bigger-profile-user.png" alt="User" class="user-photo">
+            <div class="user-subtitle">
+                <p class="user-text">Login:</p>
+                <div class="user-edit">
+                    <input type="text" name="login" placeholder="{{ user.login }}" id="user-input-login">
+                    <button type="submit" class="user-btn" onclick="unblock_login();">Edit <img src="../static/img/draw.png" alt="Draw"> </button>
+                </div>
+                <p class="user-text">Email:</p>
+                <div class="user-edit">
+                    <input type="text" name="email" placeholder="{{ user.email }}" id="user-input-email">
+                    <button type="submit" class="user-btn" onclick="unblock_email();">Edit <img src="../static/img/draw.png" alt="Draw"> </button>
+                </div>
+                <div class="user-interaction">
+                    <button type="submit" class="btn-interaction btn-update" onclick="user_update();">Update</button>
+                    <button type="submit" class="btn-interaction btn-delete" onclick="user_delete();">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+
+    <script src="../static/JS/account.js"></script>
+
+{% endblock %}

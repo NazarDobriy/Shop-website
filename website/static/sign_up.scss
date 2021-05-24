@@ -1,0 +1,73 @@
+@import 'variables';
+
+.main {
+    width: 450px;
+    height: 390px;
+    background-color: #FFD580;
+    margin: 100px auto 0 auto;
+    text-align: center;
+
+    @include breakpoint(xs) {
+        width: 430px;
+    }
+
+    @include breakpoint(xss) {
+        height: 380px;
+        width: 380px;
+        font-size: 15px;
+    }
+
+    @include breakpoint(xsss) {
+        width: 100%;
+        font-size: 14.5px;
+    }
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 300px;
+    height: 40px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    border: none;
+
+    @include breakpoint(xs) {
+        width: 280px;
+    }
+
+    @include breakpoint(xss) {
+        width: 250px;
+    }
+}
+
+.system_sign_up {
+    height: 70px;
+    width: 70px;
+    margin: -36px 0 20px 0;
+
+    @include breakpoint(xss) {
+        height: 65px;
+        width: 65px;
+        margin: -34px 0 20px 0;
+    }
+}
+
+.btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+
+    @include breakpoint(xs) {
+        padding: 10px 25px;
+    }
+
+    @include breakpoint(xss) {
+        padding: 8px 22px;
+    }
+}
+
+.btn:hover {
+    transition: all 0.5s;
+    background-color: #FF5733;
+    color: #fff;
+}

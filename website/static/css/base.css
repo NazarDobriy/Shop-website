@@ -67,6 +67,7 @@ body {
 
 .content {
   min-height: calc(100vh - 45px);
+  background-color: #F4F4F4;
 }
 
 @media (max-width: 850px) {
@@ -89,6 +90,12 @@ body {
 
 .header .logo-frame {
   display: none;
+}
+
+.header #flash {
+  height: 28px;
+  width: 30px;
+  cursor: pointer;
 }
 
 .header .menu-down {
@@ -126,7 +133,6 @@ body {
   }
   .header .logo-frame {
     display: block;
-    margin-right: 15px;
   }
   .header .logo {
     display: none;

@@ -1,0 +1,41 @@
+.main {
+  background-color: #FFD580;
+  margin: 100px auto 0 auto;
+  text-align: center;
+  width: 350px;
+  padding: 10px 10px 20px 10px;
+}
+
+@media (max-width: 510px) {
+  .main {
+    width: 300px;
+    padding: 10px 10px 15px 10px;
+  }
+}
+
+#sendbutton {
+  padding: 3px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+#sendbutton:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #FF5733;
+  color: #fff;
+}
+
+#messages {
+  text-align: center;
+}
+
+@media (max-width: 510px) {
+  #myMessage {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+}
+/*# sourceMappingURL=chatroom.css.map */

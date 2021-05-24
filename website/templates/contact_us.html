@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}<title>Contact us page</title>{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../static/css/contact_us.css">
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <img src="../static/img/telegram.png" alt="Contact" class="contact-img">
+        <h3>Make a statemant</h3>
+            <h3>and we will contact you</h3>
+            <div class="input">
+                <img src="../static/img/profile-user.png" alt="User profile" class="contact-user-img">
+                <input type="text" name="name" placeholder="Enter name" id="name">
+            </div>
+            <div class="input">
+                <img src="../static/img/phone-call.png" alt="Phone call" class="contact-phone-img">
+                <input type="text" name="phone" placeholder="Enter phone" id="phone">
+            </div>
+                <button type="submit" class="btn" onclick="send_contact();">Send</button>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="../static/JS/contact_us.js"></script>
+{% endblock %}

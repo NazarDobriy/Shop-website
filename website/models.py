@@ -56,7 +56,7 @@ class Goods(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     picture = db.Column(db.String(100), nullable=False)
     tag = db.Column(db.String(100), nullable=False)
-    price = db.Column(db.Float(), nullable=False)
+    price = db.Column(db.Integer(), nullable=False)
 
     #Foreign Key
     customer_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
@@ -66,6 +66,16 @@ class Goods(db.Model):
         self.tag = tag
         self.price = price
         self.customer_id = customer_id
+
+    def delete_from_db(self, current_id=None):
+        if current_id:
+            delete_goods = Goods.query.get(current_id)
+            db.session.delete(delete_goods)
+            db.session.commit()
+            return jsonify({"message": "Product was deleted"}, 200)
+
+        else:
+            return jsonify({"message": "Product with this id is not found"}, 404)
 
 
 class Contact(db.Model):

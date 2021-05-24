@@ -62,7 +62,6 @@
     }
 
     &-btn:hover {
-        //background-color: rgb(32, 219, 32);
         background-color: rgb(20, 203, 216);
     }
 }
@@ -70,5 +69,41 @@
 .goods:last-child {
     @include breakpoint(sm) {
         padding-top: 0;
+    }
+}
+
+.chat {
+    background-color: #FFD580;
+    margin-left: auto;
+    text-align: center;
+    width: 200px;
+
+    @include breakpoint(xss) {
+        margin: 0 auto;
+    }
+
+    &-link {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        font-weight: bold;
+        
+        &-elem {
+            margin-top: 25px;
+            padding: 5px 0 5px 0;
+            letter-spacing: 3px;
+            border: 1px solid black;
+
+            @include breakpoint(sm) {
+                margin-bottom: 25px;
+                margin-top: 0;
+            }
+        }
+
+        &-elem:hover {
+            transition: all 0.5s;
+            background-color: #FF5733;
+            color: #fff;
+        }
     }
 }

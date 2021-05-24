@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block title %}<title>Home page</title>{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../static/css/home.css">
+{% endblock %}
+
+{% block main %}
+    <div class="wrapper">
+        <div class="goods">
+
+            {% if user.is_authenticated %}
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/t-shirt.png" id="T-shirt-img" alt="T-shirt" class="goods-image">
+                <p class="goods-title" id="T-shirt-tag">Blue T-shirt</p>
+                <p class="goods-price" id="T-shirt-price">10$</p>
+                <button type="submit" class="goods-btn" onclick="add_product('T-shirt-img', 'T-shirt-tag', 'T-shirt-price');">Add</button>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/dress.png" id="Dress-img" alt="Dress" class="goods-image">
+                <p class="goods-title" id="Dress-tag">Yellow Dress</p>
+                <p class="goods-price" id="Dress-price">25$</p>
+                <button type="submit" class="goods-btn" onclick="add_product('Dress-img', 'Dress-tag', 'Dress-price');">Add</button>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/jeans.png" id="Jeans-img" alt="Jeans" class="goods-image">
+                <p class="goods-title" id="Jeans-tag">Blue Jeans</p>
+                <p class="goods-price" id="Jeans-price">15$</p>
+                <button type="submit" class="goods-btn" onclick="add_product('Jeans-img', 'Jeans-tag', 'Jeans-price');">Add</button>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/shorts.png" id="Shorts-img" alt="Shorts" class="goods-image">
+                <p class="goods-title" id="Shorts-tag">Red Shorts</p>
+                <p class="goods-price" id="Shorts-price">18$</p>
+                <button type="submit" class="goods-btn" onclick="add_product('Shorts-img', 'Shorts-tag', 'Shorts-price');">Add</button>
+            </div>
+        </div>
+
+        <div class="goods">
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/bag.png" id="Bag-img" alt="Bag" class="goods-image">
+                <p class="goods-title" id="Bag-tag">Violet Bag</p>
+                <p class="goods-price" id="Bag-price">30$</p>
+                <button type="submit" class="goods-btn" onclick="add_product('Bag-img', 'Bag-tag', 'Bag-price');">Add</button>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/sneakers.png" id="Sneakers-img" alt="Sneakers" class="goods-image">
+                <p class="goods-title" id="Sneakers-tag">Yellow Sneakers</p>
+                <p class="goods-price" id="Sneakers-price">22$</p>
+                <button type="submit" class="goods-btn" onclick="add_product('Sneakers-img', 'Sneakers-tag', 'Sneakers-price');">Add</button>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/scarf.png" id="Scarf-img" alt="Scarf" class="goods-image">
+                <p class="goods-title" id="Scarf-tag">Green Scarf</p>
+                <p class="goods-price" id="Scarf-price">8$</p>
+                <button type="submit" class="goods-btn" onclick="add_product('Scarf-img', 'Scarf-tag', 'Scarf-price');">Add</button>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/heels.png" id="Heels-img" alt="Heels" class="goods-image">
+                <p class="goods-title" id="Heels-tag">Red Heels</p>
+                <p class="goods-price" id="Heels-price">30$</p>
+                <button type="submit" class="goods-btn" onclick="add_product('Heels-img', 'Heels-tag', 'Heels-price');">Add</button>
+            </div>
+            {% else %}
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/t-shirt.png" alt="T-shirt" class="goods-image">
+                <p class="goods-title">Blue T-shirt</p>
+                <p class="goods-price">10$</p>
+                <a href="/login"><button type="submit" class="goods-btn">Add</button></a>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/dress.png" alt="Dress" class="goods-image">
+                <p class="goods-title">Yellow Dress</p>
+                <p class="goods-price">25$</p>
+                <a href="/login"><button type="submit" class="goods-btn">Add</button></a>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/jeans.png" alt="Jeans" class="goods-image">
+                <p class="goods-title">Blue Jeans</p>
+                <p class="goods-price">15$</p>
+                <a href="/login"><button type="submit" class="goods-btn">Add</button></a>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/shorts.png" alt="Shorts" class="goods-image">
+                <p class="goods-title">Red Shorts</p>
+                <p class="goods-price">18$</p>
+                <a href="/login"><button type="submit" class="goods-btn">Add</button></a>
+            </div>
+        </div>
+
+        <div class="goods">
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/bag.png" alt="Bag" class="goods-image">
+                <p class="goods-title">Violet Bag</p>
+                <p class="goods-price">30$</p>
+                <a href="/login"><button type="submit" class="goods-btn">Add</button></a>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/sneakers.png" alt="Sneakers" class="goods-image">
+                <p class="goods-title">Yellow Sneakers</p>
+                <p class="goods-price">22$</p>
+                <a href="/login"><button type="submit" class="goods-btn">Add</button></a>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/scarf.png" alt="Scarf" class="goods-image">
+                <p class="goods-title">Green Scarf</p>
+                <p class="goods-price">8$</p>
+                <a href="/login"><button type="submit" class="goods-btn">Add</button></a>
+            </div>
+            <div class="goods-item" id="inscription">
+                <img src="../static/img/heels.png" alt="Heels" class="goods-image">
+                <p class="goods-title">Red Heels</p>
+                <p class="goods-price">30$</p>
+                <a href="/login"><button type="submit" class="goods-btn">Add</button></a>
+            </div>
+            {% endif %}
+            
+        </div>
+
+        <div class="chat">
+            <a href="/chatroom" class="chat-link">
+                <div class="chat-link-elem">
+                    CHAT
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %}

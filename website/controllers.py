@@ -43,6 +43,9 @@ class GoodsController(object):
     def __init__(self, model_goods=Goods()):
         self.model_goods = model_goods
 
+    def delete(self, current_id=None):
+        return self.model_goods.delete_from_db(current_id)
+
     def create(self, model_goods=None):
         self.model_goods.picture = model_goods.get('picture')
         self.model_goods.tag = model_goods.get('tag')

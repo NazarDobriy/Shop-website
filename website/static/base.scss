@@ -57,6 +57,8 @@ body {
     @include breakpoint(md) {
         min-height: calc(100vh - 76px);
     }
+
+    background-color: $light;
 }
 
 .header {
@@ -66,6 +68,12 @@ body {
 
     .logo-frame {
         display: none;
+    }
+
+    #flash {
+        height: 28px;
+        width: 30px;
+        cursor: pointer;
     }
 
     .menu-down {
@@ -99,7 +107,6 @@ body {
     @include breakpoint(xsss) {
         .logo-frame {
             display: block;
-            margin-right: 15px;
         }
 
         .logo {

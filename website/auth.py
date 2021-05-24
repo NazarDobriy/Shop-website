@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify, make_response, json
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
-from .controllers import UserController, ContactController
+from .controllers import GoodsController, UserController, ContactController
 from .models import User, Goods, Contact
 from . import db
 
@@ -56,16 +56,18 @@ def account():
     return render_template("account.html", user=current_user)
 
 
-@auth.route('/payment')
+@auth.route('/payment/<int:id>')
 @login_required
-def payment():
+def payment(id):
+    product = Goods.query.get(id)
+
     from cloudipsp import Api, Checkout
     api = Api(merchant_id=1396424,
             secret_key='test')
     checkout = Checkout(api=api)
     data = {
         "currency": "USD",
-        "amount": 10000
+        "amount": str(product.price) + "00"
     }
     url = checkout.url(data).get('checkout_url')
     return redirect(url)
@@ -85,9 +87,14 @@ def FAQ():
     return render_template("FAQ.html", user=current_user)
 
 
-@auth.route('/basket', methods=['GET','POST'])
+@auth.route('/basket', methods=['GET','POST', 'DELETE'])
 @login_required
 def basket():
+    if request.method == 'DELETE':
+        goods_data = request.get_json()
+        current_goods_id = goods_data.get('id')
+        return GoodsController().delete(current_goods_id)
+
     goods = Goods.query.all()
     return render_template("basket.html", user=current_user, goods=goods)
 
@@ -95,3 +102,8 @@ def basket():
 @auth.route('/password-reset')
 def password_reset():
     return render_template("/password_reset.html", user=current_user)
+
+
+@auth.route('/chatroom')
+def chatroom():
+    return render_template("/chatroom.html", user=current_user)

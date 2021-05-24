@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/fashion.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    {% block title %}{% endblock %}
+    {% block link %}{% endblock %}
+
+    <!-- Connect to React -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div class="content" id="content">
+        <div class="page-light">
+            <div class="wrapper">
+                <header class="header">
+                    <nav class="menu-down">
+                        <span class="menu-down-item">Menu</span>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="nav">
+                            {% if user.is_authenticated %}
+                            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="/account" class="nav-link">Account</a></li>
+                            <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+                            {% else %}
+                            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="/login" class="nav-link">Log in</a></li>
+                            <li class="nav-item"><a href="/sign-up" class="nav-link">Sign up</a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                    <img src="../static/img/logo.svg" id="logo" alt="logo" class="logo">
+                    <img src="../static/img/frame.svg" alt="logo" class="logo-frame">
+                    <nav class="header-nav">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="/basket" class="nav-link">Payment</a></li>
+                        </ul>
+                    </nav>
+                    <img src="../static/img/black-flash.png" alt="Flash" id="flash" onclick="changeImg();">
+                    <a href="/basket"><img src="../static/img/bin.svg" alt="basket"></a>
+                </header>
+            </div>
+        </div>
+
+        <div class="page">
+            {% block main %}{% endblock %}
+        </div>
+    
+    </div>
+
+    <div class="page-dark">
+        <div class="wrapper">
+            <footer class="footer">
+                <div class="footer-logo">
+                    <img src="../static/img/logo-white.svg" alt="Logo" class="footer-logo">
+                </div>
+                <nav>
+                    <ul class="footer-nav">
+                        <li class="footer-item"><a href="/FAQ" class="footer-link"><span class="footer-span">|</span>FAQ</a></li>
+                        <li class="footer-item"><a href="/contact-us" class="footer-link"><span class="footer-span">|</span>Contact us</a></li>
+                        <li class="footer-item"><span class="footer-span">|</span>Copyright @ Loop Inc.<span class="footer-span">|</span></li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../static/JS/app.js"></script>
+
+    {% block script %}{% endblock %}
+
+</body>
+</html>

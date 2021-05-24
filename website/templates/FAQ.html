@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}<title>FAQ page</title>{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../static/css/FAQ.css">
+{% endblock %}
+
+{% block main %}
+    <div class="faq" id="inscription">
+        <div class="faq-registration">
+            <div class="faq-top">
+                <img src="../static/img/registratsiya.png" alt="Registration" class="faq-picture">
+                <span class="faq-title">Registration on the website:</span>
+            </div>
+            <p class="faq-subtitle">What is registration for?</p>
+            <ul class="faq-list-nav">
+                <li class="faq-list">Create own private account</li>
+                <li class="faq-list">Update or delete information in account</li>
+                <li class="faq-list">Get administration support</li>
+                <li class="faq-list">Buy and add goods to cart</li>
+            </ul>
+            <p class="faq-subtitle">How to register?</p>
+            <p class="faq-text">
+                Go to page <a href="/sign-up" class="faq-link">Sign up</a> and fill the form, enter your email, login and password.
+            </p>
+        </div>
+
+        <div class="faq-order">
+            <div class="faq-top">
+                <img src="../static/img/oformlenie-zakaza.png" alt="Order" class="faq-picture">
+                <span class="faq-title">Ordering on the website:</span>
+            </div>
+            <p class="faq-subtitle">How to place an order?</p>
+            <p class="faq-text">
+                Go to page <a href="/" class="faq-link">Home</a> and choose the favourite product, it automatically will add to basket.
+            </p>
+            <p class="faq-subtitle">How to buy or delete the product?</p>
+            <p class="faq-text">
+                After adding product to basket, you can enter <a href="/basket"><img src="../static/img/bin.svg" alt="basket"></a> end click button buy or delete current product.
+            </p>
+            <p class="faq-subtitle">How to payed?</p>
+            <p class="faq-text">
+                After clicking buy in basket, you can pay for the product in the page <a href="/payment" class="faq-link">Payment</a>, enter your bank card and sum.
+            </p>
+        </div>
+
+        <div class="faq-delivery">
+            <div class="faq-top">
+                <img src="../static/img/voprosi-po-dostavke.png" alt="Delivery" class="faq-picture">
+                <span class="faq-title">Product delivery via website:</span>
+            </div>
+            <p class="faq-subtitle">How the goods are delivered?</p>
+            <p class="faq-text">
+                Delivery across Ukraine is carried out by transport services "Nova Pochta", "Mist Express". In every city of Ukraine, you can take your order from our website.
+            </p>
+            <p class="faq-subtitle">How much does the delivery cost?</p>
+            <p class="faq-text">
+                Delivery cost depends on the method of payment and type of delivery (courier or Nova Pochta / Mist Express).
+            </p>
+        </div>
+
+        <div class="faq-magnifier">
+            <div class="faq-top">
+                <img src="../static/img/magnifier.png" alt="Magnifier" class="faq-picture">
+                <span class="faq-title">Problems or qustions:</span>
+            </div>
+            <p class="faq-subtitle">If your how promblem with ordering or buying or another question go to page <a href="/contact-us" class="faq-link">Contats us</a> enter your name and phone and we contact with you immediately.</p>
+        </div>
+    </div>
+{% endblock %}
