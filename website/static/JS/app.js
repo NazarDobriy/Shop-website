@@ -3,15 +3,15 @@ function add_product(picture_id, tag_id, price_id) {
     const tag = document.getElementById(tag_id);
     const price = document.getElementById(price_id);
 
-    var field = "";
+    let field = "";
 
-    for (var i = 0; i < price.textContent.length; i++) {
+    for (let i = 0; i < price.textContent.length; i++) {
         if (price.textContent[i] != '$') {
             field += price.textContent[i];
         }
     }
     
-    var product = {
+    let product = {
         picture: picture.src,
         tag: tag.textContent,
         price: parseInt(field)
@@ -44,13 +44,13 @@ function add_product(picture_id, tag_id, price_id) {
 }
 
 function changeImg() {
-    let picture = document.getElementById('flash');
-    let page = document.getElementById('content');
+    const picture = document.getElementById('flash');
+    const page = document.getElementById('content');
 
     if (picture.src == window.origin + "/static/img/black-flash.png") {
         picture.src = "../static/img/white-flash.png";
 
-        let header_words = document.querySelectorAll("#inscription");
+        let header_words = document.querySelectorAll("div.goods-item");
 
         for (let i = 0; i < header_words.length; i++) {
             header_words[i].style.color = "#fff";
@@ -62,7 +62,7 @@ function changeImg() {
     else {
         picture.src = "../static/img/black-flash.png";
 
-        let header_words = document.querySelectorAll("#inscription");
+        let header_words = document.querySelectorAll("div.goods-item");
 
         for (let i = 0; i < header_words.length; i++) {
             header_words[i].style.color = "#212121";
@@ -71,5 +71,3 @@ function changeImg() {
         page.style.backgroundColor = '#f9f6f1';
     }
 }
-
-export default add_product;

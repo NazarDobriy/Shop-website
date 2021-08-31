@@ -1,9 +1,7 @@
 function product_delete(product_id) {
     const path = window.location.href;
 
-    var product = {
-        id: product_id
-    };
+    let product = { id: product_id };
 
     fetch(path, {
         method: "DELETE",
@@ -23,7 +21,7 @@ function product_delete(product_id) {
         else {
             res.json().then(function (data) {
                 console.log(data[0]);
-                var redirect_path = window.origin;
+                let redirect_path = window.origin;
                 alert("Successfully, the product has been deleted!");
                 return window.location.href = redirect_path;
             })

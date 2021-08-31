@@ -13,16 +13,16 @@
                 <p class="user-text">Login:</p>
                 <div class="user-edit">
                     <input type="text" name="login" placeholder="{{ user.login }}" id="user-input-login">
-                    <button type="submit" class="user-btn" onclick="unblock_login();">Edit <img src="../static/img/draw.png" alt="Draw"> </button>
+                    <button type="submit" class="user-btn" onclick="unlock_login();">Edit <img src="../static/img/draw.png" alt="Draw"> </button>
                 </div>
                 <p class="user-text">Email:</p>
                 <div class="user-edit">
                     <input type="text" name="email" placeholder="{{ user.email }}" id="user-input-email">
-                    <button type="submit" class="user-btn" onclick="unblock_email();">Edit <img src="../static/img/draw.png" alt="Draw"> </button>
+                    <button type="submit" class="user-btn" onclick="unlock_email();">Edit <img src="../static/img/draw.png" alt="Draw"> </button>
                 </div>
                 <div class="user-interaction">
-                    <button type="submit" class="btn-interaction btn-update" onclick="user_update();">Update</button>
-                    <button type="submit" class="btn-interaction btn-delete" onclick="user_delete();">Delete</button>
+                    <button type="submit" class="btn-interaction btn-update">Update</button>
+                    <button type="submit" class="btn-interaction btn-delete">Delete</button>
                 </div>
             </div>
         </div>

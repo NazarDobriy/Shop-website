@@ -32,19 +32,19 @@ class User(db.Model, UserMixin):
             # get user from DB
             update_user = User.query.filter_by(id=current_id).first()
 
-            if update_data['login']:
+            if update_data['login'] != '':
                 new_login = update_data.get('login')
                 if new_login:
                     if User.query.filter_by(login=new_login).first():
-                        return jsonify({"message": "User with this data already exist"}, 404)
+                        return jsonify({"message": "User with this login already exist"}, 404)
                     else:
                         update_user.login = new_login
 
-            if update_data['email']:
+            if update_data['email'] != '':
                 new_email = update_data.get('email')
                 if new_email:
                     if User.query.filter_by(email=new_email).first():
-                        return jsonify({"message": "User with this data already exist"}, 404)
+                        return jsonify({"message": "User with this email already exist"}, 404)
                     else:
                         update_user.email = new_email
             
